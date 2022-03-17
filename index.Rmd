@@ -1,0 +1,170 @@
+---
+title: "Welcome to the macromolecular aerosols lab"
+description: |
+  Reasearch in the cryosphere and pristine environments hostet at the Laboratory of Atmospheric Chemistry, Paul Scherrer Institute (PSI), Switzerland
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Einzelne Pages updaten: 
+# library(rmarkdown)
+# render_site("index.Rmd")
+
+# How to
+# https://www.andreashandel.com/posts/distill-github-website/
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+```{r, fig.cap="Tjuonavagge, Sápmi", echo=FALSE, out.width='50%'}
+knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/20120330_130454.jpg")
+```
+
+<style>
+d-title {
+  display: none!important;
+}
+d-appendix {
+ display: none!important;
+}
+.twitter-border {
+ border: 1px dashed black;
+ width: 300px;
+ position : relative;
+ border-radius: 5px;
+ margin: 0 auto;
+}
+.twitter-border::before {
+ content: "\f099";
+ font-family: "Font Awesome 5 Brands";
+ font-weight: 900; 
+ font-size: 1.5rem;
+ position: absolute;
+ top: -15px;
+ left: -15px;
+}
+
+.twitter-border > p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-bottom: 0em;
+}
+.home-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+@media (min-width: 1024px) {
+  .home-with-sidebar .home-main {
+    float: left;
+    width: 60%;
+  }
+}
+.home-main {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .home-with-sidebar .home-sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.home-sidebar {
+  font-size: 16px;
+}
+.news-container {
+  width: 80%;
+}
+
+.news-item {
+  line-height: 1.45em;
+  border-bottom: 1px solid #e3e4F0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.9em;
+}
+.news-item h3:nth-child(1) {
+  color: #6fa8dc;
+  font-family: var(--body-font), var(--body-default);
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9em;
+}
+.date {
+  color: gray;
+  display: block;
+  font-size: 0.75em;
+}
+.date::before {
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900; 
+   content: "\f133";
+   padding-right: 2px;
+}
+
+</style>
+
+<div class="home-with-sidebar l-screen-inset">
+
+<div class="home-main">
+
+## Recent news
+:::: news-container
+
+::: news-item
+<!-- `r Sys.Date()` -->
+### <i class="fas fa-file-signature"></i> Hiring
+* Looking for a PhD student. Starting August-October 2022. Get in contact!
+:::
+::: news-item
+### <i class="fas fa-newspaper"></i> Published
+* Vernooij et. al (2022) [Stable carbon isotopic composition of biomass burning emissions – implications for estimating the contribution of C3 and C4 plants. *ACP*](https://acp.copernicus.org/articles/22/2871/2022/)
+* Winiger (2022) [Passenger exposure to aerosols on intra-European train travel. *Air Quality, Atmosphere & Health*](https://link.springer.com/article/10.1007/s11869-021-01143-2) 
+:::
+
+<!-- ::: news-item -->
+<!-- ### <i class="fas fa-video"></i> Lastest talks -->
+
+<!-- You can watch some of my latest talks at -->
+
+<!-- * Constructing experimental designs with the edibble R-package https://doi.org/10.26181/6194952b80356 -->
+<!-- * Visualising experimental designs with the edibble and deggust R-packages https://doi.org/10.26181/6192f76029618 -->
+
+<!-- Talks were organised by Fazel Almasi with funding from Intellectual Climate Fund La Trobe University. -->
+
+<!-- ::: -->
+
+<!-- ::: news-item -->
+<!-- ### <i class="fab fa-r-project"></i> Hex stickers  -->
+<!-- I have now hex stickers for the `edibble` and `deggust` R packages. If you see me in-person, feel free to ask for it! -->
+<!-- <div style="margin: 0 auto; width:50%;"> -->
+<!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you ever see me in-person, feel free to ask me for hex stickers for my R packages ☺️ <a href="https://t.co/4VXdv091IM">pic.twitter.com/4VXdv091IM</a></p>&mdash; Emi Tanaka 🌾 (@statsgen) <a href="https://twitter.com/statsgen/status/1410842537485471744?ref_src=twsrc%5Etfw">July 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+<!-- </div> -->
+<!-- ::: -->
+::::
+
+</div>
+
+<div class="home-sidebar">
+<div class="twitter-border">
+<a class="twitter-timeline" data-width="300" data-height="600" data-theme="dark" href="https://twitter.com/PatrikWiniger?ref_src=twsrc%5Etfw">Tweets by PatrikWiniger</a>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<!-- <center> -->
+<!-- <a href="https://www.statsoc.org.au/DistinguishedPresentersAwardRecipients"><img src="images/ssa-digital-badge-2021.png" width="80%" style="max-width:250px;"></a> -->
+<!-- </center> -->
+</div>
+</div>
