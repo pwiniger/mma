@@ -1,0 +1,31 @@
+---
+title: "About me"
+description: |
+  Patrik Winiger, PhD
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Research Interest  
+I am interested in short-lived climate pollutants, their sources, effects on climate, health impacts, and potential mitigation pathways. This includes not only combustion products, but also other light absorbing aerosols and impurities in snow and ice; like algae, bacteria, dust, soot, or polymers. In short: macromolecules
+
+---  
+
+# Research projects  
+* MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps
+
+---  
+
+# Previous positions  
+* Project leader GIS modelling, Stadt Zürich, Air Quality Department, 2021-2022  
+* Grant Advisor and Project Manager, ETH Zürich, EUGrantsAccess, 2018-2021  
+* Postdoc, Vrije Universiteit Amsterdam, Earth and Climate unit, 2018-2019  
+* PhD Student, Stockholm university, Department of Applied Sciences and Analytical Chemistry, 2011-2017  
+
+---  
+
+```{r, fig.cap="The author during prescribed fire fieldwork, South Africa", echo=FALSE, out.width='40%'}
+knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/IMG_20180830_122204.jpg")
+```

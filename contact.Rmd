@@ -1,0 +1,107 @@
+---
+title: "Contact"
+description: |
+  Get in contact for master projects or collaborations!
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+patrikwiniger4 [] gmail.com
+
+<!-- http://www.geo.uzh.ch/~jseib/contact.html-->
+
+```{r, fig.cap="The relative size of particles, by Daniel Loverbey", echo=FALSE, out.width='50%'}
+knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/relative size of particles aerosols.jpg")
+```
+
+
+
+<!-- 
+
+Please understand that I get a lot of e-mails every day. To ensure that I can help you timely and efficiently with your request, please see the information below, where you may find useful information and further guidance on how to contact me efficiently. If your request falls into one of the following categories, you might jump there directly:
+
+Info for UZH students | Requests for a meeting| Requests for positions | Requests for reviewing
+
+My replies are often very short, especially when I am on a mobile device but also when I am between meetings or other tasks. Please do not take it personal in case my email is very short or I miss a polite start or end. A short email never implies any negative feeling or disapproval (in the very few cases where this would be the case, I promise to be more explicit :-) )
+
+Please make sure to use the head e-mail address (head.department@....) if your request relates to my role as head of the department. Such requests will probably not be dealt with if they come to my personal e-mail - and vice versa.
+
+Usually I reply to e-mails within 72 h. If you are waiting longer, please feel free to remind me, sometimes important e-mails just get buried in my inbox. Please understand that I usually will not reply to requests, for which the answer can be found based on the info given on this website. Also, please avoid e-mails with large attachments (> 2 MB) as these might be filtered out (use some file transfer service if needed). The more specific you write your e-mail/request, the easier is it for me to reply and act efficiently. (Förstås ökar sannolikheten för ett snabbt svar ytterligare om datorbrevet är skriven på svenska :-) )
+
+Info for UZH students
+For individual courses:
+
+In general, please see the information for each course on Olat. Please understand that I will not reply to questions, which are already addressed there.
+
+Current info:
+
+    In general, BSc course are given in German (but some lectures and literature might be in English), whereas MSc courses are thaught in English.
+    Geo351.5 (=geo735 = Hydrologische Prozesse) changed its number and is now Geo344. To provide a good education experience in this course with its practical elements, we have to restrict the number of places in Geo344. Interested students were asked to express their motivation before 23.June (please see info in the 'Vorlesungsverzeichnis')
+    ESS371 Wasser und Mensch is also open to Geography students and can be taken as 'Wahlpflichtkurs'.
+    We sometimes receive questions regarding taking courses which go in the same time slots. While we only for some of the course elements require attendance, I still strongly recommend to not book courses which overlap in time. Based on experiences from previous years, it might be in theory possible to follow two courses, which use the same time slot, but in practice this most of the times does not work out.
+    Geo866 WEasser in der Schweiz: this is an online course with an on-site introduction and exam. The idea is to work on the course during the 'vorlesungsfreie' period and this the introduction is always at the end of the term and the exam in the beginning of the following one (usually week 2-3 of the term). 
+
+If you have a specific request beyond the information on Olat, please make sure to include the course number (e.g., geo475, i.e. WITHOUT a space) in the header of your e-mail (otherwise I might not find your e-mail in my inbox by the time I am able to reply). Please understand that I am responsible for different courses, partly with many students and I do not always know who is taking which course. Therefroe it is important that you mention which course you are taking currently. An email like 'I can't come to class on Monday' might be ignored simply because I might not know which course on Monday you are talking about (=I won't check the lists of participants in the different courses).
+
+Master-thesis
+
+You are most welcome if you are interested in writing your MSc thesis in H2K. A list of possible topics can be found on here. Please note that this list is not always up-to-date, however, it will provide you with an idea of possible thesis projects. Usually, the final topic will then be formulated together with the student. So, please contact us if you are interested in writing your MSc tehsis in H2K and we will do our best to find a suitable project for you. In general, it is benefitial for both you and us if thesis projects are somehow related to ongoing research activities in our group. Please understand that we have limited capacities to supervise other topics. If you want to write your thesis in the field of hydrology and climate, but externally (e.g., at WSL, ETH, abroad, …), I can act as faculty member. However, you need to be aware that in this case the regular supervision and the necessary resources must all be provided by the external host.
+
+Bachelor-thesis ESS
+
+You are most welcome if you are interested in writing your BSc thesis in H2K. For Geography students, the BSc thesis is a literature study and topics will be distributed centrally and you are most welcome to choose any of the H2K 'Oberthemen'. For ESS students, also experimental and computer-based projects are possible. Please feel free to contact us to discuss possible topics.
+
+Requests for a meeting
+
+Please understand that my calendar fills up quickly. As I have to reserve some time for 'my' PhD and MSc students (highest priority!) and currently starting research projects, I am afraid much of my time for the rest of 2020 is already booked. The easiest way to arrange a meeting with me is to use this link to my Terminland-account. Many of my meetings take place virtually on Zoom currently due to the special Covid19 situation. Please request a virtual meeting if you prefer this option. Some days, I will work from home myself and will, thus, suggest to meet virtually. Please indicate in your request if you prefer a 'real' meeting.
+
+https://www.terminland.de
+
+Like everyone these days, I love filling out Doodle requests. However, if a Doodle can be avoided, I love it even more.
+
+In cases where a Doodle is needed, please adhere to the following guidelines for efficient doodle pools:
+
+    Limit the number of options. (max 5-10 depending on the number of participants, or as equation: min(10,max(0.8*n,3)+2) where n is the number of participants)
+    Be realistic about the length of the time slots. Finding a 30 min time slot is much easier than a half day.
+    Close the doodle in a timely manner. In general, I am not able to keep all doodle options open, so a time slot might be gone by the time the doodle is closed. 
+
+
+Requests for joining our research group
+If you are contacting me about positions as PhD-student or postdoc, please read through the following:
+
+    Normally, open positions in our group are announced on the abouthydrology-mailing list, twitter and/or the Department website (here).
+    If there is no open position announced, this means that we have no funding available for new group members. Therefore, please clearly state in case you have a specific funding source in mind (if possible include a link).
+    It is great to receive mails by prospective students/postdocs, but the amount means that it often is impossible to reply to all. If you contact me, please be as specific as possible on why you are interested in joining just our group.
+    Please allow for enough time before a potential proposal submission (at least a month before any deadline).
+    If you send your cv or other documents, please avoid large attachments (> 2 MB), use some file transfer service if needed.
+    Please be aware of the high costs of living in Zurich. Usually, a minimum cost of 2000 CHF per month should be assumed. For information see the information of the University on the cost of living for students in Zurich' . Unfortunately this means that several common stipends or other forms of funding will not be not sufficient for living in Zurich.
+    UZH also provides a webpage with other useful information about life in Zurich (not only) for students.
+    To indicate that you have read this information please add ‘(I read the info)’ in your e-mail header (and/or state it in your e-mail) 
+
+
+Requests for reviews
+
+The review process is very important to me as it ensures scientific quality and everyone who expects her/his manuscripts to be reviewed, of course, also needs to help with the review process. Besides my role as Editor for Wires Water and HESS I review about 20 manuscripts per year (see here). Please understand that I have to decline many requests due to time constraints. In general, I am more willing to accept a review request in cases where I see the use of my specific expertise. Usually, I respond within 72 hours to review requests. If missing to do so, that most probably means that I will not able to accept the request.
+
+Other reviewing tasks such as research proposals and PhD theses are also enjoyable and important to me, but again, there is a limit of how many of such tasks I can accept. So, please understand if I have to decline your request.
+
+
+
+Prof. Jan Seibert
+Hydrology and Climate
+Physical Geography Division
+Department of Geography
+University of Zurich - Irchel
+Winterthurerstrasse 190
+CH-8057 Zurich
+Switzerland
+
+Tel.: +41 44 63 55200
+E-mail: jan.seibert@geo.uzh.ch
+Homepage of the Hydrology & Climate unit: http://www.geo.uzh.ch/en/units/h2k/
+
+Jan Seibert -->

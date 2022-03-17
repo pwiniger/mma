@@ -1,0 +1,89 @@
+---
+title: "Publications"
+description: |
+  Published work by members of the macromolecular aerosols lab
+#date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+<!--```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+-->
+
+```{r, fig.cap="Stordalen, Abisko, Sápmi", echo=FALSE, out.width='50%'}
+knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/20130404_132554.jpg")
+```
+
+<!--https://www.r-bloggers.com/2019/09/automatically-update-your-publication-list-using-r-scholar-ii-get-a-pdf/
+
+-->
+
+
+```{r publications,  echo=FALSE, warning=FALSE}
+library(scholar)
+library(tidyverse)
+library(glue)
+library(htmltools)
+
+# escape some special chars, german umlauts, ...
+char2html <- function(x){
+  dictionary <- data.frame(
+    symbol = c("ä","ö","ü","Ä", "Ö", "Ü", "ß"),
+    html = c("&auml;","&ouml;", "&uuml;","&Auml;",
+             "&Ouml;", "&Uuml;","&szlig;"))
+  for(i in 1:dim(dictionary)[1]){
+    x <- gsub(dictionary$symbol[i],dictionary$html[i],x)
+  }
+  x
+}
+
+# my google scholar user id from my profile url
+# https://scholar.google.com/citations?user=CUER_-QAAAAJ&hl=en
+# pull from google
+html_1 <- get_publications("CUER_-QAAAAJ")
+
+# convert to htlm table - the ugly way ;)
+html_2 <- html_1 %>% #The output of html_1 goes into as_tibble
+  as_tibble %>% arrange(desc(year)) %>% #The output of as_tibble goes into mutate
+  mutate(
+#    author=str_replace_all(author, " (\\S) ", "\\1 "),
+    author=str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
+    author=str_replace_all(author, ", \\.\\.\\.", " et al."),
+    author=str_replace_all(author, "P Winiger", "<b>P Winiger</b>") # make my name fat
+  ) %>% split(.$year) %>%
+    map(function(x){
+      x <- x %>%
+        glue_data('<tr><td width="100%"> &#8226; &nbsp {author} ({year}) <a href="https://scholar.google.com/scholar?oi=bibs&cluster={cid}&btnI=1&hl=en">{title}</a>, {journal}, {number} <br></td></tr>') %>%
+        str_replace_all("(, )+</p>", "</p>") %>%
+        char2html()
+      x <- c('<table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody>', x, '</tbody></table>')
+      return(x);
+    }) %>% rev
+
+html_3 <- map2(names(html_2) %>% paste0("<h3>", ., "</h3>"), html_2, c) %>% unlist
+
+html_4 <- c(
+  paste0('<p style="text-align: right; margin-top: -10px;"><small>Last updated <i>',
+         format(Sys.Date(), format="%B %d, %Y"),
+          '&nbsp; &ndash; Pulled automatically from my <a href="https://scholar.google.com/citations?hl=en&user=CUER_-QAAAAJ">Google Scholar profile</a>. </small></p>'), html_3)
+
+# write the html list to a file
+# writeLines(html_4, "...publications.html")
+
+HTML(html_4)
+
+```
+
+
+<!--- 
+```{r publications,  echo=FALSE, warning=FALSE}library(pagedown)
+#need to have google chrome installed
+chrome_print(
+  # link to my publication list w/o header/footer in html
+  "https://thackl.github.io/publications-clean",
+  # the pdf to generate
+  "publications.pdf"
+)
+```
+--->
