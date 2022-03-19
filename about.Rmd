@@ -1,6 +1,6 @@
 ---
 title: "Patrik Winiger, PhD"
-image: knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/IMG_20180830_122204.jpg")
+image: "IMG_20180830_122204.jpg"
 links:
   - label: <i class="fab fa-linkedin-in"></i>
     url: "https://linkedin.com/in/patrik-winiger"
