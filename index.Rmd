@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r, fig.cap="Tjuonavagge, Sápmi", echo=FALSE, out.width='50%'}
-knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/20120330_130454.jpg")
+knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/20120330_130454.jpg")
 ```
 
 <style>
@@ -126,7 +126,7 @@ d-appendix {
 ::: news-item
 <!-- `r Sys.Date()` -->
 ### <i class="fas fa-file-signature"></i> Hiring
-* Looking for a PhD student. Starting August-October 2022. Get in contact!
+* Looking for a PhD student. Starting August-October 2022. [Get in contact!](https://pwiniger.github.io/mma/contact.html)
 :::
 ::: news-item
 ### <i class="fas fa-newspaper"></i> Published

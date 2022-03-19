@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 -->
 
 ```{r, fig.cap="Stordalen, Abisko, Sápmi", echo=FALSE, out.width='50%'}
-knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/20130404_132554.jpg")
+knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/20130404_132554.jpg")
 ```
 
 <!--https://www.r-bloggers.com/2019/09/automatically-update-your-publication-list-using-r-scholar-ii-get-a-pdf/
