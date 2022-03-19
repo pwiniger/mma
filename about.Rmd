@@ -6,7 +6,7 @@ links:
     url: "https://linkedin.com/in/patrik-winiger"
   - label: <i class="fab fa-twitter"></i>
     url: "https://twitter.com/PatrikWiniger"
-  - label: <i class="fab fa-orcid"></i>
+  - label: ORCID <i class="fab fa-orcid"></i>
     url: "https://orcid.org/my-orcid"
   - label: <i class="fas fa-envelope"></i>
     url: "mailto:patrikwiniger4@gmail.com"
