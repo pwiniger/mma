@@ -1,14 +1,14 @@
 ---
 title: "Patrik Winiger, PhD"
-image: "/Users/pwini/Documents/Website/mma/images/IMG_20180830_122204.jpg"
+image: "_ano.jpg"
 links:
-  - label: LinkedIn
+  - label: <i class="fab fa-linkedin-in"></i>
     url: "https://linkedin.com/in/patrik-winiger"
-  - label: Twitter
+  - label: <i class="fa-brands fa-twitter"></i>
     url: "https://twitter.com/PatrikWiniger"
-  - label: ORCID
+  - label: <i class="fa-brands fa-orcid"></i>
     url: "https://orcid.org/my-orcid"
-  - label: Email
+  - label: <i class="fa-solid fa-envelope"></i>
     url: "mailto:patrikwiniger4@gmail.com"
 output:
   postcards::trestles
@@ -24,7 +24,7 @@ I am interested in short-lived climate pollutants, their sources, effects on cli
 
 ---  
 
-## Previous positions  
+## Expericence and Education
 * Project leader GIS modelling, Stadt Zürich, Air Quality Department, 2021-2022  
 * Grant Advisor and Project Manager, ETH Zürich, EUGrantsAccess, 2018-2021  
 * Postdoc, Vrije Universiteit Amsterdam, Earth and Climate unit, 2018-2019  
