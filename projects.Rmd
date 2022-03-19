@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 * MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps (Ambizione project funded by the Swiss National Science Foundation SNSF)
 
 ```{r, fig.cap="Macromolecular model of aged wood-derived Black Carbon by Joeri Kaal, 2010 (PhD Thesis: Identification, molecular characterisation and significance of fire residues in colluvial soils from Campo Lameiro (NW Spain))", echo=FALSE, out.width='50%'}
-knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/macromolecular model of aged wood-derived BC KAAL 2011.png")
+knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/macromolecular model of aged wood-derived BC KAAL 2011.png")
 ```
 
 

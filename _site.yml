@@ -1,6 +1,6 @@
 name: "Macromoleculelab"
 title: "Macromolecular Aerosols Lab"
-theme: theme.css
+theme: theme.css 
 description: |
   Macromolecule Lab
 output_dir: "docs"

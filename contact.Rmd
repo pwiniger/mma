@@ -15,7 +15,7 @@ patrikwiniger4 [] gmail.com
 <!-- http://www.geo.uzh.ch/~jseib/contact.html-->
 
 ```{r, fig.cap="The relative size of particles, by Daniel Loverbey", echo=FALSE, out.width='50%'}
-knitr::include_graphics("/Users/pwini/Documents/Website/Macromoleculelab/images/relative size of particles aerosols.jpg")
+knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/relative size of particles aerosols.jpg")
 ```
 
 
