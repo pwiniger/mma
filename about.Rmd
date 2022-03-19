@@ -1,14 +1,14 @@
 ---
 title: "Patrik Winiger, PhD"
-image: "_ano.jpg"
+image: knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/IMG_20180830_122204.jpg")
 links:
   - label: <i class="fab fa-linkedin-in"></i>
     url: "https://linkedin.com/in/patrik-winiger"
-  - label: <i class="fa-brands fa-twitter"></i>
+  - label: <i class="fab fa-twitter"></i>
     url: "https://twitter.com/PatrikWiniger"
-  - label: <i class="fa-brands fa-orcid"></i>
+  - label: <i class="fab fa-orcid"></i>
     url: "https://orcid.org/my-orcid"
-  - label: <i class="fa-solid fa-envelope"></i>
+  - label: <i class="fas fa-envelope"></i>
     url: "mailto:patrikwiniger4@gmail.com"
 output:
   postcards::trestles
