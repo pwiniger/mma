@@ -5,6 +5,7 @@ description: |
 site: distill::distill_website
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
@@ -24,7 +25,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-##  Research in the cryosphere and pristine environments, hostet at the Laboratory of Atmospheric Chemistry, Paul Scherrer Institute (PSI), Switzerland
+#  Research in the cryosphere and pristine environments 
+##### Hostet at the Laboratory of Atmospheric Chemistry, Paul Scherrer Institute (PSI), Switzerland
+
   
 ```{r, fig.cap="Tjuonavagge, Sápmi", echo=FALSE, out.width='50%'}
 knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/20120330_130454.jpg")
