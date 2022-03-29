@@ -10,7 +10,9 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-patrikwiniger4 [] gmail.com
+Send me [a message](mailto:patrikwiniger4@gmail.com) if you have any questions regarding our work, are interested in collaborations or future projects, a master thesis, etc.
+For more information about PSI and the research topics we cover at the Laboratory of Atmospheric Chemistry, [visit our website](https://www.psi.ch/en/lac)
+
 
 <!-- http://www.geo.uzh.ch/~jseib/contact.html-->
 
