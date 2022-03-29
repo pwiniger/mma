@@ -23,6 +23,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+
+##  Research in the cryosphere and pristine environments, hostet at the Laboratory of Atmospheric Chemistry, Paul Scherrer Institute (PSI), Switzerland
+  
 ```{r, fig.cap="Tjuonavagge, Sápmi", echo=FALSE, out.width='50%'}
 knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/20120330_130454.jpg")
 ```
@@ -115,10 +118,9 @@ d-appendix {
 }
 
 </style>
-
 <div class="home-with-sidebar l-screen-inset">
-
 <div class="home-main">
+
 
 ## Recent news
 :::: news-container
@@ -126,7 +128,7 @@ d-appendix {
 ::: news-item
 <!-- `r Sys.Date()` -->
 ### <i class="fas fa-file-signature"></i> Hiring
-* Looking for a PhD student. Starting August-October 2022. [Get in contact!](https://pwiniger.github.io/mma/contact.html)
+* Looking for a PhD student. Position starting ideally from August 2022 at the [Laboratory of Atmospheric Chemistry](https://www.psi.ch/en/lac), Paul Scherrer Institute (PSI), Switzerland. [Get in contact!](https://pwiniger.github.io/mma/contact.html)
 :::
 ::: news-item
 ### <i class="fas fa-newspaper"></i> Published

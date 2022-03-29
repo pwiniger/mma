@@ -6,8 +6,10 @@ links:
     url: "https://linkedin.com/in/patrik-winiger"
   - label: <i class="fab fa-twitter"></i>
     url: "https://twitter.com/PatrikWiniger"
-  - label: ORCID <i class="fab fa-orcid"></i>
+  - label: ORCiD <i class="fab fa-orcid"></i>
     url: "https://orcid.org/my-orcid"
+  - label: <i class="fab fa-researchgate"></i>
+    url: "https://www.researchgate.net/profile/Patrik-Winiger"
   - label: <i class="fas fa-envelope"></i>
     url: "mailto:patrikwiniger4@gmail.com"
 output:
@@ -25,10 +27,14 @@ I am interested in short-lived climate pollutants, their sources, effects on cli
 ---  
 
 ## Experience and Education
-* Project leader GIS modelling, Stadt Zürich, Air Quality Department, 2021-2022  
+* Scientist, Paul Scherrer Institute (PSI), Laboratory of Atmospheric Chemistry, 2022-today
+* Project leader GIS modelling, City of Zürich, Air Quality Department, 2021-2022  
 * Grant Advisor and Project Manager, ETH Zürich, EUGrantsAccess, 2018-2021  
 * Postdoc, Vrije Universiteit Amsterdam, Earth and Climate unit, 2018-2019  
-* PhD Student, Stockholm university, Department of Applied Sciences and Analytical Chemistry, 2011-2017  
+* PhD Student and Postdoc, Stockholm University, Department of Applied Sciences and Analytical Chemistry, 2011-2017
+* MSc Chemistry, University of Basel, 2008-2010
+* BSc Chemical Engineering, University of Applied Sciences Northwestern Switzerland, 2002-2007
+* Chemical laboratory assistant (apprenticeship), Novartis/Syngenta, 1999-2002
 
 ---  
 

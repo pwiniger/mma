@@ -1,0 +1,23 @@
+---
+title: "The Sharpe Ratio"
+description: |
+  A short description of the post.
+author:
+  - name: Patrik Winiger
+date: 2022-03-29
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+import_post("https://blogs.egu.eu/divisions/as/2019/09/13/a-brighter-future-for-the-arctic/")
+
+```
+
+import_post("https://blogs.egu.eu/divisions/as/2019/09/13/a-brighter-future-for-the-arctic/", check_license = FALSE)
+
