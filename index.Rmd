@@ -131,7 +131,7 @@ d-appendix {
 ::: news-item
 <!-- `r Sys.Date()` -->
 ### <i class="fas fa-file-signature"></i> Hiring
-* Looking for a PhD student. Position starting ideally from August 2022 at the [Laboratory of Atmospheric Chemistry](https://www.psi.ch/en/lac), Paul Scherrer Institute (PSI), Switzerland. More information and application process, here.](https://www.psi.ch/en/pa/job-opportunities/50884-phd-student)
+* Looking for a PhD student. Position starting ideally from August 2022 at the [Laboratory of Atmospheric Chemistry](https://www.psi.ch/en/lac), Paul Scherrer Institute (PSI), Switzerland. [More information and application process, here.](https://www.psi.ch/en/pa/job-opportunities/50884-phd-student)
 :::
 ::: news-item
 ### <i class="fas fa-newspaper"></i> Published
