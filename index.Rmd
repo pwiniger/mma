@@ -130,11 +130,13 @@ d-appendix {
 
 ::: news-item
 <!-- `r Sys.Date()` -->
-### <i class="fas fa-file-signature"></i> Hiring
-* Looking for a PhD student. Position starting ideally from August 2022 at the [Laboratory of Atmospheric Chemistry](https://www.psi.ch/en/lac), Paul Scherrer Institute (PSI), Switzerland. [More information and application process, here.](https://www.psi.ch/en/pa/job-opportunities/50884-phd-student)
+### <i class="fas fa-file-signature"></i> Lab Notes
+* We collected over 4,000 filters and are currently setting up our mass spectrometers to analyse a long time series of high-altitude aerosols
+* Welcome to our new team member, PhD student [Julian Weng](https://www.psi.ch/de/lac/people/julian-weng)!
 :::
 ::: news-item
 ### <i class="fas fa-newspaper"></i> Published
+* Vernooij et. al (2022) [A quadcopter unmanned aerial system (UAS)-based methodology for measuring biomass burning emission factors. *AMT*](https://amt.copernicus.org/articles/15/4271/2022/)
 * Vernooij et. al (2022) [Stable carbon isotopic composition of biomass burning emissions – implications for estimating the contribution of C3 and C4 plants. *ACP*](https://acp.copernicus.org/articles/22/2871/2022/)
 * Winiger (2022) [Passenger exposure to aerosols on intra-European train travel. *Air Quality, Atmosphere & Health*](https://link.springer.com/article/10.1007/s11869-021-01143-2) 
 :::

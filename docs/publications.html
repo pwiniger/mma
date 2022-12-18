@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -787,6 +788,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1028,10 +1030,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1863,9 +1861,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1877,6 +1887,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1976,6 +2011,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1998,7 +2035,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -5739,7 +5776,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -5795,8 +5832,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Publications</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Published work by members of the macromolecular aerosols
-lab</p></p>
+<p><p>Published work by members of the macromolecular aerosols lab</p></p>
 </div>
 
 
@@ -5817,7 +5853,7 @@ Figure 1: Stordalen, Abisko, Sápmi
 
 -->
 <div class="layout-chunk" data-layout="l-body">
-<p><p style="text-align: right; margin-top: -10px;"><small>Last updated <i>March 31, 2022&nbsp; &ndash; Pulled automatically from my <a href="https://scholar.google.com/citations?hl=en&user=CUER_-QAAAAJ">Google Scholar profile</a>. </small></p> <h3>2022</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp R Vernooij, <b>P Winiger</b>, M Wooster, T Strydom, L Poulain, U Dusek et al. (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">An Unmanned Aerial System (UAS) based methodology for measuring biomass burning emission factors</a>, Atmospheric Measurement Techniques Discussions, 1-42 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp R Vernooij, U Dusek, ME Popa, P Yao, A Shaikat, C Qiu, <b>P Winiger</b> et al. (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Stable carbon isotopic composition of biomass  burning emissions – implications for estimating  the contribution of C3 and C4 plants</a>, Atmospheric Chemistry and Physics, 22 (4), 2871-2890 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b> (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Passenger exposure to aerosols on intra-European train travel</a>, Air Quality, Atmosphere & Health, 1-11 <br></td></tr> </tbody></table> <h3>2020</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp U Dusek, R Vernooij, A Shaikat, C Qiu, E Popa, <b>P Winiger</b> et al. (2020) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Stable carbon isotopic composition of biomass burning emissions-implications for estimating the contribution of C3 and C4 plants</a>, EGU General Assembly Conference Abstracts, 10484 <br></td></tr> </tbody></table> <h3>2019</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, TE Barrett, RJ Sheesley, L Huang, S Sharma, LA Barrie et al. (2019) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=16029154900430218545&btnI=1&hl=en">Source apportionment of circum-Arctic atmospheric black carbon from isotopes and modeling</a>, Science advances, 5 (2), eaau8052 <br></td></tr> </tbody></table> <h3>2017</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, IP Semiletov, OV Dudarev et al. (2017) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=16036956270325515728&btnI=1&hl=en">Siberian Arctic black carbon sources constrained by model and observation</a>, Proceedings of the National Academy of Sciences, 114 (7), E1054-E1061 <br></td></tr> </tbody></table> <h3>2016</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, &Ouml; Gustafsson (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=4035579087750117138&btnI=1&hl=en">The sources of atmospheric black carbon at a European gateway to the Arctic</a>, Nature Communications, 7 (1), 1-8 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, &Ouml; Gustafsson (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=6404531052785683368&btnI=1&hl=en">The sources of atmospheric black carbon at a European gateway to the Arctic, Nat. Commun., 7, 12776</a>, ,  <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Year-round radiocarbon-based source apportionment and transport modelling of black carbon aerosols at the Zeppelin Observatory, Svalbard</a>, ,  <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b> (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Isotope-based source apportionment of black carbon aerosols in the Eurasian Arctic</a>, Department of Environmental Science and Analytical Chemistry, Stockholm …,  <br></td></tr> </tbody></table> <h3>2015</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, KE Yttri, P Tunved, O Gustafsson (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=3092391595490906356&btnI=1&hl=en">Isotope-based source apportionment of EC aerosol particles during winter high-pollution events at the Zeppelin Observatory, Svalbard</a>, Environmental Science & Technology, 49 (19), 11959-11966 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp TE Barrett, O Gustafsson, <b>P Winiger</b>, C Moffett, J Back, RJ Sheesley (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Year-round Source Contributions of Fossil Fuel and Biomass Combustion to Elemental Carbon on the North Slope Alaska Utilizing Radiocarbon Analysis</a>, AGU Fall Meeting Abstracts, 2015, A24C-05 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, K Espen Yttri, P Tunved, &Ouml; Gustafsson (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Radiocarbon based source apportionment of black carbon in the form of PM10 elemental carbon aerosol particles at the Zeppelin Observatory, Svalbard</a>, EGU General Assembly Conference Abstracts, 13678 <br></td></tr> </tbody></table></p>
+<p style="text-align: right; margin-top: -10px;"><small>Last updated <i>December 18, 2022&nbsp; &ndash; Pulled automatically from my <a href="https://scholar.google.com/citations?hl=en&user=CUER_-QAAAAJ">Google Scholar profile</a>. </small></p> <h3>2022</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp R Vernooij, U Dusek, ME Popa, P Yao, A Shaikat, C Qiu, <b>P Winiger</b> et al. (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=4215962220509586446,17504091058312117746&btnI=1&hl=en">Stable carbon isotopic composition of biomass  burning emissions – implications for estimating  the contribution of C3 and C4 plants</a>, Atmospheric Chemistry and Physics, 22 (4), 2871-2890 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b> (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=7804798657355697341&btnI=1&hl=en">Passenger exposure to aerosols on intra-European train travel</a>, Air Quality, Atmosphere & Health, 15 (3), 491-501 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp R Vernooij, <b>P Winiger</b>, M Wooster, T Strydom, L Poulain, U Dusek et al. (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">A quadcopter unmanned aerial system (UAS)-based methodology for measuring biomass burning emission factors</a>, Atmospheric Measurement Techniques, 15 (14), 4271-4294 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp R Vernooij, <b>P Winiger</b>, M Wooster, T Strydom, L Poulain, U Dusek et al. (2022) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">An Unmanned Aerial System (UAS) based methodology for measuring biomass burning emission factors</a>, Atmospheric Measurement Techniques Discussions, 1-42 <br></td></tr> </tbody></table> <h3>2020</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp U Dusek, R Vernooij, A Shaikat, C Qiu, E Popa, <b>P Winiger</b> et al. (2020) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Stable carbon isotopic composition of biomass burning emissions-implications for estimating the contribution of C3 and C4 plants</a>, EGU General Assembly Conference Abstracts, 10484 <br></td></tr> </tbody></table> <h3>2019</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, TE Barrett, RJ Sheesley, L Huang, S Sharma, LA Barrie et al. (2019) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=16029154900430218545&btnI=1&hl=en">Source apportionment of circum-Arctic atmospheric black carbon from isotopes and modeling</a>, Science advances, 5 (2), eaau8052 <br></td></tr> </tbody></table> <h3>2017</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, IP Semiletov, OV Dudarev et al. (2017) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=16036956270325515728&btnI=1&hl=en">Siberian Arctic black carbon sources constrained by model and observation</a>, Proceedings of the National Academy of Sciences, 114 (7), E1054-E1061 <br></td></tr> </tbody></table> <h3>2016</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, &Ouml; Gustafsson (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=4035579087750117138&btnI=1&hl=en">The sources of atmospheric black carbon at a European gateway to the Arctic</a>, Nature Communications, 7 (1), 1-8 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl, &Ouml; Gustafsson (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=6404531052785683368&btnI=1&hl=en">The sources of atmospheric black carbon at a European gateway to the Arctic, Nat. Commun., 7, 12776</a>, ,  <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, S Eckhardt, A Stohl (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Year-round radiocarbon-based source apportionment and transport modelling of black carbon aerosols at the Zeppelin Observatory, Svalbard</a>, ,  <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b> (2016) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Isotope-based source apportionment of black carbon aerosols in the Eurasian Arctic</a>, Department of Environmental Science and Analytical Chemistry, Stockholm …,  <br></td></tr> </tbody></table> <h3>2015</h3> <table class="publication-table" border="0px" cellspacing="10" cellpadding="10" rules="", frame=""><tbody> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, KE Yttri, P Tunved, O Gustafsson (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=3092391595490906356&btnI=1&hl=en">Isotope-based source apportionment of EC aerosol particles during winter high-pollution events at the Zeppelin Observatory, Svalbard</a>, Environmental Science & Technology, 49 (19), 11959-11966 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp TE Barrett, O Gustafsson, <b>P Winiger</b>, C Moffett, J Back, RJ Sheesley (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Year-round Source Contributions of Fossil Fuel and Biomass Combustion to Elemental Carbon on the North Slope Alaska Utilizing Radiocarbon Analysis</a>, AGU Fall Meeting Abstracts, 2015, A24C-05 <br></td></tr> <tr><td width="100%"> &#8226; &nbsp <b>P Winiger</b>, A Andersson, K Espen Yttri, P Tunved, &Ouml; Gustafsson (2015) <a href="https://scholar.google.com/scholar?oi=bibs&cluster=NA&btnI=1&hl=en">Radiocarbon based source apportionment of black carbon in the form of PM10 elemental carbon aerosol particles at the Zeppelin Observatory, Svalbard</a>, EGU General Assembly Conference Abstracts, 13678 <br></td></tr> </tbody></table>
 </div>
 <!--- 
 ```{r publications,  echo=FALSE, warning=FALSE}library(pagedown)
@@ -5830,8 +5866,7 @@ chrome_print(
 )
 ```
 --->
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
