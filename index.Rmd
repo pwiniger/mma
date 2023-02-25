@@ -131,6 +131,8 @@ d-appendix {
 ::: news-item
 <!-- `r Sys.Date()` -->
 ### <i class="fas fa-file-signature"></i> Lab Notes
+* The Department of Air Quality Basel (Lufthygieneamt beider Basel) supports us with an aerosol sampling device for our Greenland fieldwork. Many thanks!
+* All filters have been analysed with 3 different mass spectrometers during a two month campaign. Now comes the data analysis
 * We collected over 4,000 filters and are currently setting up our mass spectrometers to analyse a long time series of high-altitude aerosols
 * Welcome to our new team member, PhD student [Julian Weng](https://www.psi.ch/de/lac/people/julian-weng)!
 :::
