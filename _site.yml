@@ -1,6 +1,6 @@
 name: "Macromoleculelab"
 title: "Macromolecular Aerosols Lab"
-theme: theme.css 
+#theme: theme.css 
 description: |
   Macromolecule Lab
 output_dir: "docs"
@@ -20,6 +20,7 @@ navbar:
     - text: "Contact"
       href: contact.html
 output: distill::distill_article
+
 # inspiration: 
 # https://github.com/emitanaka/emitanaka.github.io
 # https://jhelvy.github.io/distillery/showcase.html

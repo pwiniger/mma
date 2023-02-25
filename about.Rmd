@@ -1,5 +1,5 @@
 ---
-title: "Patrik Winiger, PhD"
+title: "Macromolecular Aerosols Lab"
 image: "IMG_20180830_122204.jpg"
 links:
   - label: <i class="fab fa-linkedin-in"></i>
@@ -16,17 +16,26 @@ output:
   postcards::trestles
 ---
 
-## Research Interest  
-I am interested in short-lived climate pollutants, their sources, effects on climate, health impacts, and potential mitigation pathways. This includes not only combustion products, but also other light absorbing aerosols and impurities in snow and ice; like algae, bacteria, dust, soot, or polymers. In short: macromolecules
-
----  
 
 ## Research projects  
-* [MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps](https://pwiniger.github.io/mma/projects.html)
+* [MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps](https://pwiniger.github.io/mma/projects.html) (PI)
+* [Greenlandic Fjord ecosystems in a changing climate: socio-cultural and environmental interactions (GreenFjord)](https://www.epfl.ch/labs/eerl/eerl-home-page/research/greenfjord/) (collaborators)
 
----  
+---
 
-## Experience and Education
+## Group Members
+
+Currently the junior group consists of PhD Student [Julian Weng](https://www.psi.ch/de/lac/people/julian-weng) and I. 
+We are hosted at the Laboratory of Atmospheric Chemistry ([LAC](https://www.psi.ch/en/lac)), Paul Scherrer Institute (PSI), Switzerland, in [Imad El Haddad](https://www.psi.ch/en/lac/people/imad-el-haddad)'s [Environmental Molecular Science](https://www.psi.ch/en/lac/molecular-cluster-and-particle-processes) group. 
+
+---
+
+## PI - Patrik Winiger, PhD
+
+#### Research Interest  
+I am interested in short-lived climate pollutants, their sources, effects on climate, health impacts, and potential mitigation pathways. This includes not only combustion products, but also other light absorbing aerosols and impurities in snow and ice; like algae, bacteria, dust, soot, or polymers. In short: macromolecules
+
+#### Experience and Education
 * Scientist, Paul Scherrer Institute (PSI), Laboratory of Atmospheric Chemistry, 2022-today
 * Project leader GIS modelling, City of Zürich, Air Quality Department, 2021-2022  
 * Grant Advisor and Project Manager, ETH Zürich, EUGrantsAccess, 2018-2021  

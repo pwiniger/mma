@@ -10,27 +10,33 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps 
-##### Ambizione project funded by the Swiss National Science Foundation SNSF
+# 2022-2026: MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps 
+##### Ambizione project funded by the SNSF (Swiss National Science Foundation)
 
 ```{r, fig.cap="Macromolecular model of aged wood-derived Black Carbon by Joeri Kaal, 2010 (PhD Thesis: Identification, molecular characterisation and significance of fire residues in colluvial soils from Campo Lameiro (NW Spain))", echo=FALSE, out.width='50%'}
 knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/macromolecular model of aged wood-derived BC KAAL 2011.png")
 ```
 
-## The idea behind MACrAA
+### The idea behind MACrAA
 
 During combustion, tiny particles and gases are emitted, many of which are not known to date. This is because there are no methods to analyse them comprehensively, especially as the molecules, which are created during combustion, react with each other and with other molecules in the environment to produce a huge variety of molecules, many of which are very large macromolecules. Because it is difficult to follow the molecules and their reactions in the environment, the fraction of particles that can be analysed becomes smaller and smaller with time and as they age. This makes it difficult to detect them with contemporary methods. The objective of this project is to develop methods to analyse aerosol particles which cannot currently be analysed.
 
 The idea behind this project is a method that stems from polymer chemistry and will allow to look into particles like polymers, more broadly known as microplastics - thereby a broad spectrum of aerosols can be analysed. The method we plan to develop will hopefully allow to better analyse many such large molecules.
 
-## Research motivation
+### Research motivation
 
 The interest in the project is not just of scientific nature but also because of the possible influence on climate and health. I.e. Aerosol particles can be the seed for clouds which reflect sunlight and have a cooling influence. Other types of particles are quite dark so they absorb sunlight and heat up the atmosphere a bit more, especially when they are deposited on a lighter surface like on the Arctic’s snow and ice where they can increase the absorption. The project’s focus is therefore on the cryosphere such as the Arctic and Alps where bright surfaces like snow and ice are prevalent. 
 
-## Research impact
+### Research impact
 
 The direct impact of this method is that new chemical tracers (found in the environment) will be used as chemical fingerprints which can be traced back to predecessor molecules and their specific sources. This allows to identify the origins of pollutants which are potentially harmful for health and climate. I.e. the analysis of macromolecules allows to trace them back to their original source. An example would be wood combustion, i.e. the burning of wood results in large molecules, which could then be traced back to wood combustion. This method could then be used in all kinds of samples, like ice cores or sediments, which may lead to information like historical changes in global fire behaviour, linked to changes of human behaviours, which affect health as well as the climate.
 
 
 ##### This text is an adaptation of a portrait about the project, originally published as as a "News & Highlights" item on the Energy and Environment (ENE) division website at PSI. [Read the full version here](https://www.psi.ch/en/ene/scientific-highlights/successful-ambizione-grant-applicant)
 
+
+Funded by
+
+```{r, echo=FALSE, out.width='50%'}
+knitr::include_graphics("/Users/pwini/Documents/Website/mma/images/SNF_logo_standard_web_color_pos_e.png")
+```
