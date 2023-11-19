@@ -40,28 +40,28 @@ d-title {
 d-appendix {
  display: none!important;
 }
-.twitter-border {
- border: 1px dashed black;
- width: 300px;
- position : relative;
- border-radius: 5px;
- margin: 0 auto;
-}
-.twitter-border::before {
- content: "\f099";
- font-family: "Font Awesome 5 Brands";
- font-weight: 900; 
- font-size: 1.5rem;
- position: absolute;
- top: -15px;
- left: -15px;
-}
+<!-- .twitter-border { -->
+<!--  border: 1px dashed black; -->
+<!--  width: 300px; -->
+<!--  position : relative; -->
+<!--  border-radius: 5px; -->
+<!--  margin: 0 auto; -->
+<!-- } -->
+<!-- .twitter-border::before { -->
+<!--  content: "\f099"; -->
+<!--  font-family: "Font Awesome 5 Brands"; -->
+<!--  font-weight: 900;  -->
+<!--  font-size: 1.5rem; -->
+<!--  position: absolute; -->
+<!--  top: -15px; -->
+<!--  left: -15px; -->
+<!-- } -->
 
-.twitter-border > p {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-bottom: 0em;
-}
+<!-- .twitter-border > p { -->
+<!--   margin-block-start: 0em; -->
+<!--   margin-block-end: 0em; -->
+<!--   margin-bottom: 0em; -->
+<!-- } -->
 .home-with-sidebar {
   padding-left: 45px;
   padding-right: 45px;
@@ -131,6 +131,7 @@ d-appendix {
 ::: news-item
 <!-- `r Sys.Date()` -->
 ### <i class="fas fa-file-signature"></i> Lab Notes
+* We successfully completed fieldwork in Greenland and will be analyzing the samples in spring 2024, as part of an ETH Zürich master thesis project
 * The Department of Air Quality Basel (Lufthygieneamt beider Basel) supports us with an aerosol sampling device for our Greenland fieldwork. Many thanks!
 * All filters have been analysed with 3 different mass spectrometers during a two month campaign. Now comes the data analysis
 * We collected over 4,000 filters and are currently setting up our mass spectrometers to analyse a long time series of high-altitude aerosols
@@ -160,20 +161,20 @@ d-appendix {
 <!-- I have now hex stickers for the `edibble` and `deggust` R packages. If you see me in-person, feel free to ask for it! -->
 <!-- <div style="margin: 0 auto; width:50%;"> -->
 <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you ever see me in-person, feel free to ask me for hex stickers for my R packages ☺️ <a href="https://t.co/4VXdv091IM">pic.twitter.com/4VXdv091IM</a></p>&mdash; Emi Tanaka 🌾 (@statsgen) <a href="https://twitter.com/statsgen/status/1410842537485471744?ref_src=twsrc%5Etfw">July 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-<!-- </div> -->
+</div>
 <!-- ::: -->
 ::::
 
 </div>
 
-<div class="home-sidebar">
-<div class="twitter-border">
-<a class="twitter-timeline" data-width="300" data-height="600" data-theme="dark" href="https://twitter.com/PatrikWiniger?ref_src=twsrc%5Etfw">Tweets by PatrikWiniger</a>
-</div>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<!-- <div class="home-sidebar"> -->
+<!-- <div class="twitter-border"> -->
+<!-- <a class="twitter-timeline" data-width="300" data-height="600" data-theme="dark" href="https://twitter.com/PatrikWiniger?ref_src=twsrc%5Etfw">Tweets by PatrikWiniger</a> -->
+<!-- </div> -->
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  -->
 
-<!-- <center> -->
-<!-- <a href="https://www.statsoc.org.au/DistinguishedPresentersAwardRecipients"><img src="images/ssa-digital-badge-2021.png" width="80%" style="max-width:250px;"></a> -->
-<!-- </center> -->
-</div>
-</div>
+<!-- <!-- <center> -->
+<!-- <!-- <a href="https://www.statsoc.org.au/DistinguishedPresentersAwardRecipients"><img src="images/ssa-digital-badge-2021.png" width="80%" style="max-width:250px;"></a> -->
+<!-- <!-- </center> -->
+<!-- </div> -->
+<!-- </div> -->
