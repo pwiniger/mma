@@ -8,8 +8,8 @@ links:
     url: "https://twitter.com/PatrikWiniger"
   - label: ORCiD <i class="fab fa-orcid"></i>
     url: "https://orcid.org/my-orcid"
-  - label: <i class="fab fa-researchgate"></i>
-    url: "https://www.researchgate.net/profile/Patrik-Winiger"
+#  - label: <i class="fab fa-researchgate"></i>
+#    url: "https://www.researchgate.net/profile/Patrik-Winiger"
   - label: <i class="fas fa-envelope"></i>
     url: "mailto:patrikwiniger4@gmail.com"
 output:
@@ -18,7 +18,7 @@ output:
 
 
 ## Research projects  
-* [MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps](https://pwiniger.github.io/mma/projects.html) (PI)
+* [MACrAA - Macromolecular aerosols in the cryosphere from the Arctic to the Alps](https://www.psi.ch/en/lac/projects/macraa) (PI)
 * [Greenlandic Fjord ecosystems in a changing climate: socio-cultural and environmental interactions (GreenFjord)](https://www.epfl.ch/labs/eerl/eerl-home-page/research/greenfjord/) (collaborators)
 
 ---
@@ -26,7 +26,7 @@ output:
 ## Group Members
 
 Currently the junior group consists of PhD Student [Julian Weng](https://www.psi.ch/de/lac/people/julian-weng) and I. 
-We are hosted at the Laboratory of Atmospheric Chemistry ([LAC](https://www.psi.ch/en/lac)), Paul Scherrer Institute (PSI), Switzerland, in [Imad El Haddad](https://www.psi.ch/en/lac/people/imad-el-haddad)'s [Environmental Molecular Science](https://www.psi.ch/en/lac/molecular-cluster-and-particle-processes) group. 
+We are hosted at the Laboratory of Atmospheric Chemistry ([LAC](https://www.psi.ch/en/lac)), Paul Scherrer Institute (PSI), Switzerland, in [Imad El Haddad](https://www.psi.ch/en/lac/people/imad-el-haddad)'s [Molecular Cluster and Particle Processes](https://www.psi.ch/en/lac/molecular-cluster-and-particle-processes) group. 
 
 ---
 
